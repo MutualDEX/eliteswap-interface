@@ -6,7 +6,7 @@ import styled, {
   css,
   DefaultTheme
 } from 'styled-components'
-import { useIsDarkMode } from '../state/user/hooks'
+/*import { useIsDarkMode } from '../state/user/hooks'*/
 import { Text, TextProps } from 'rebass'
 import { Colors } from './styled'
 
@@ -21,7 +21,7 @@ const MEDIA_WIDTHS = {
 
 const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } = Object.keys(MEDIA_WIDTHS).reduce(
   (accumulator, size) => {
-    ;(accumulator as any)[size] = (a: any, b: any, c: any) => css`
+    ; (accumulator as any)[size] = (a: any, b: any, c: any) => css`
       @media (max-width: ${(MEDIA_WIDTHS as any)[size]}px) {
         ${css(a, b, c)}
       }
@@ -32,7 +32,7 @@ const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } 
 ) as any
 
 const white = '#FFFFFF'
-const black = '#000000'
+const black = '#313131'
 
 export function colors(darkMode: boolean): Colors {
   return {
@@ -41,7 +41,7 @@ export function colors(darkMode: boolean): Colors {
     black,
 
     // text
-    text1: darkMode ? '#FFFFFF' : '#000000',
+    text1: darkMode ? '#FFFFFF' : '#313131',
     text2: darkMode ? '#C3C5CB' : '#565A69',
     text3: darkMode ? '#6C7284' : '#888D9B',
     text4: darkMode ? '#565A69' : '#C3C5CB',
@@ -116,14 +116,14 @@ export function theme(darkMode: boolean): DefaultTheme {
 }
 
 export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const darkMode = useIsDarkMode()
+  const darkMode = true;/*useIsDarkMode()*/
 
   const themeObject = useMemo(() => theme(darkMode), [darkMode])
 
   return <StyledComponentsThemeProvider theme={themeObject}>{children}</StyledComponentsThemeProvider>
 }
 
-const TextWrapper = styled(Text)<{ color: keyof Colors }>`
+const TextWrapper = styled(Text) <{ color: keyof Colors }>`
   color: ${({ color, theme }) => (theme as any)[color]};
 `
 
@@ -185,25 +185,20 @@ html, input, textarea, button {
     font-family: 'Inter var', sans-serif;
   }
 }
-
 html,
 body {
   margin: 0;
   padding: 0;
 }
-
  a {
    color: ${colors(false).blue1}; 
  }
-
 * {
   box-sizing: border-box;
 }
-
 button {
   user-select: none;
 }
-
 html {
   font-size: 16px;
   font-variant: none;
@@ -212,6 +207,93 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-feature-settings: 'ss01' on, 'ss02' on, 'cv01' on, 'cv03' on;
   
+  background: url(images/hexagons.png), -moz-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
+			background: url(images/hexagons.png),-webkit-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
+			background: url(images/hexagons.png),-o-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
+			background: url(images/hexagons.png),-ms-linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
+			background: url(images/hexagons.png),linear-gradient(45deg, rgba(16, 114, 189, 1) 0%, rgba(16, 114, 189, 1) 23%, rgba(2, 41, 97, 1) 48%, rgba(0, 4, 38, 1) 73%, rgba(0, 0, 21, 1) 100%);
+			
+}
+div[data-reach-dialog-content] a
+{
+  color:#FFE600 ;
+}
+#center-logo
+{
+  margin-bottom:40px;
+  zoom:0.8;
+  position: relative;
+    z-index: 1;
+}
+#animate-zoom
+{
+  display:inline-block;
+  
+  animation: blink-animation 0.4s infinite;
+}
+@keyframes blink-animation {
+  form {
+    transform:scale(1)
+  }
+  to {
+    transform:scale(1.3)
+  }
+}
+.token-amount-input::placeholder
+{
+  color:rgba(255,255,255,0.5) !important;
+}
+#shadow_bottom
+		{
+			background:url(./images/shadow_bottom.png) repeat-x;
+			width:100%;
+			height:860px;
+			position:fixed;
+			bottom:0;
+			z-index:-1;
+    }
+    
+@media only screen and (max-width: 960px) {
+  #shadow_bottom
+		{
+      opacity:0.6;
+    }
+    #center-logo
+    {
+      display:none
+    }
+    #logo-symbol
+    {
+      display:none;
+    }
+    #logo-full
+    {
+      display:block !important;
+      margin:0 auto;
+      margin-top:20px;
+    }
+    #logo-wrapper
+    {
+      margin-right:0px;
+    }
+    #body-wrapper
+    {
+      box-shadow: 0 0 50px #01001de6;
+    }
+}
+#stake-liquidity-token div:first-child
+{
+  background: transparent !important;
+}
+div[data-reach-dialog-overlay] {
+  background:rgba(20,30,75,0.80) !important;
+}
+div[data-reach-dialog-content]{
+  box-shadow: 0 0 100px #01001de6 !important;
+}
+.bfqITV
+{
+  border-radius:0 !important;
 }
 `
 
@@ -220,7 +302,6 @@ html {
   color: ${({ theme }) => theme.text1};
   background-color: ${({ theme }) => theme.bg2};
 }
-
 body {
   min-height: 100vh;
   background-position: 0 -30vh;
