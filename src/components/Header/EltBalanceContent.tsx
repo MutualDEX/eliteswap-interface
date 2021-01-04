@@ -67,7 +67,7 @@ export default function EltBalanceContent({ setShowEltBalanceModal }: { setShowE
         <CardNoise />
         <CardSection gap="md">
           <RowBetween>
-            <TYPE.white color="white">Your ELT Breakdown</TYPE.white>
+            <TYPE.white color="white">Your BGSP Breakdown</TYPE.white>
             <StyledClose stroke="white" onClick={() => setShowEltBalanceModal(false)} />
           </RowBetween>
         </CardSection>
@@ -105,11 +105,11 @@ export default function EltBalanceContent({ setShowEltBalanceModal }: { setShowE
         <CardSection gap="sm">
           <AutoColumn gap="md">
             <RowBetween>
-              <TYPE.white color="white">ELT price:</TYPE.white>
+              <TYPE.white color="white">BGSP price:</TYPE.white>
               <TYPE.white color="white">${eltPrice?.toFixed(2) ?? '-'}</TYPE.white>
             </RowBetween>
             <RowBetween>
-              <TYPE.white color="white">ELT in circulation:</TYPE.white>
+              <TYPE.white color="white">BGSP in circulation:</TYPE.white>
               <TYPE.white color="white">{circulation?.toFixed(0, { groupSeparator: ',' })}</TYPE.white>
             </RowBetween>
             <RowBetween>
@@ -117,7 +117,7 @@ export default function EltBalanceContent({ setShowEltBalanceModal }: { setShowE
               <TYPE.white color="white">{totalSupply?.toFixed(0, { groupSeparator: ',' })}</TYPE.white>
             </RowBetween>
             {elt && elt.chainId === ChainId.MAINNET ? (
-              <ExternalLink href={`https://eliteswap.io/info/token/${elt.address}`}>View ELT Analytics</ExternalLink>
+              <ExternalLink href={`https://bigswap.info/token/${elt.address}`}>View BGSP Analytics</ExternalLink>
             ) : null}
           </AutoColumn>
         </CardSection>
