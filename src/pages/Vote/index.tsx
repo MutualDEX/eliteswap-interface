@@ -136,11 +136,11 @@ export default function Vote() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>Elite Swap Governance</TYPE.white>
+                <TYPE.white fontWeight={600}>Big Swap Governance</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  ELT tokens represent voting shares in Elite Swap governance. You can vote on each proposal yourself or
+                  BGSP tokens represent voting shares in Big Swap governance. You can vote on each proposal yourself or
                   delegate your votes to third party.
                 </TYPE.white>
               </RowBetween>
@@ -222,7 +222,7 @@ export default function Vote() {
         })}
       </TopSection>
       <TYPE.subHeader color="text3">
-        A minimum threshold of the total ELT supply is required to submit proposals
+        A minimum threshold of the total BGSP supply is required to submit proposals
       </TYPE.subHeader>
     </PageWrapper>
   )
