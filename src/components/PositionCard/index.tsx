@@ -150,7 +150,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
             <span role="img" aria-label="wizard-icon">
               ⭐️
             </span>{' '}
-            By adding liquidity you&apos;ll earn 0.3% of all trades on this pair proportional to your share of the pool.
+            By adding liquidity you&apos;ll earn 0.5% of all trades on this pair proportional to your share of the pool.
             Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
           </TYPE.subHeader>
         </LightCard>
@@ -204,7 +204,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
             </Text>
             {!!stakedBalance && (
               <ButtonELTGradient as={Link} to={`/elt/${currencyId(currency0)}/${currencyId(currency1)}`}>
-                <HideExtraSmall>Earning ELT</HideExtraSmall>
+                <HideExtraSmall>Earning BGSP</HideExtraSmall>
                 <ExtraSmallOnly>
                   <span role="img" aria-label="bolt">
                     ⚡
