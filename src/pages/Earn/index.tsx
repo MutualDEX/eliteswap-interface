@@ -54,11 +54,11 @@ export default function Earn() {
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
-                <TYPE.white fontWeight={600}>Elite Swap liquidity mining</TYPE.white>
+                <TYPE.white fontWeight={600}>Big Swap liquidity mining</TYPE.white>
               </RowBetween>
               <RowBetween>
                 <TYPE.white fontSize={14}>
-                  Deposit your Liquidity Provider tokens to receive ELT, EliteSwap protocol governance token
+                  Deposit your Liquidity Provider tokens to receive BGSP, BigSwap protocol governance token
                 </TYPE.white>
               </RowBetween>{' '}
             </AutoColumn>
