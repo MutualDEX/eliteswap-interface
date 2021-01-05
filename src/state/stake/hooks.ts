@@ -9,7 +9,7 @@ import useCurrentBlockTimestamp from 'hooks/useCurrentBlockTimestamp'
 
 export const STAKING_GENESIS = 1605484800
 
-export const REWARDS_DURATION_DAYS = 60
+export const REWARDS_DURATION_DAYS = 180
 
 // TODO add staking rewards addresses here
 export const STAKING_REWARDS_INFO: {
@@ -30,11 +30,23 @@ export const STAKING_REWARDS_INFO: {
     {
       tokens: [WETH[ChainId.MAINNET], USDT],
       stakingRewardAddress: '0xBF2B5Be71Bc353906618A0BeF413F9c2E33f6dd4'
-    },
+    }, 
     {
       tokens: [WETH[ChainId.MAINNET], WBTC],
       stakingRewardAddress: '0xad064270150db970E3a10d0f492CAa87CAE678E1'
     }
+    {
+      tokens: [WETH[ChainId.MAINNET], LINK],
+      stakingRewardAddress: '0xa2107FA5B38d9bbd2C461D6EDf11B11A50F6b974'
+    },
+    {
+      tokens: [WETH[ChainId.MAINNET], UNI],
+      stakingRewardAddress: '0xd3d2E2692501A5c9Ca623199D38826e513033a17'
+    },
+    {
+      tokens: [WETH[ChainId.MAINNET], AAVE],
+      stakingRewardAddress: '0x7Fc66500c84A76Ad7e9c93437bFc5Ac33E2DDaE9'
+    } 
   ]
 }
 
