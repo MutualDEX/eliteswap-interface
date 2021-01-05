@@ -36,7 +36,7 @@ export const STAKING_REWARDS_INFO: {
       stakingRewardAddress: '0xad064270150db970E3a10d0f492CAa87CAE678E1'
     },
     {
-      tokens: [WETH[ChainId.MAINNET], UNI],
+      tokens: [WETH[ChainId.MAINNET], ELT],
       stakingRewardAddress: '0xd3d2E2692501A5c9Ca623199D38826e513033a17'
     } 
   ]
