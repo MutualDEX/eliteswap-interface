@@ -318,7 +318,7 @@ export default function Header() {
           <StyledNavLink id={`stake-nav-link`} to={'/vote'}>
             Vote
           </StyledNavLink>
-          <StyledExternalLink id={`stake-nav-link`} href={'https://eliteswap.io/info'}>
+          <StyledExternalLink id={`stake-nav-link`} href={'https://bigswap.info'}>
             Charts <span style={{ fontSize: '11px' }}>↗</span>
           </StyledExternalLink>
         </HeaderLinks>
@@ -334,7 +334,7 @@ export default function Header() {
             <ELTWrapper onClick={toggleClaimModal}>
               <ELTAmount active={!!account && !availableClaim} style={{ pointerEvents: 'auto' }}>
                 <TYPE.white padding="0 2px">
-                  {claimTxn && !claimTxn?.receipt ? <Dots>Claiming ELT</Dots> : 'Claim ELT'}
+                  {claimTxn && !claimTxn?.receipt ? <Dots>Claiming BGSP</Dots> : 'Claim BGSP'}
                 </TYPE.white>
               </ELTAmount>
               <CardNoise />
@@ -361,7 +361,7 @@ export default function Header() {
                     </TYPE.white>
                   </HideSmall>
                 )}
-                ELT
+                BGSP
               </ELTAmount>
               <CardNoise />
             </ELTWrapper>
