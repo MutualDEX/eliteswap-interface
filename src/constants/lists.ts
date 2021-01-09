@@ -1,6 +1,6 @@
 // the Elite Swap Default token list lives here
 export const DEFAULT_TOKEN_LIST_URL =
-  'https://unpkg.com/@eliteswap/default-token-list@latest'
+  'https://gateway.pinata.cloud/ipfs/QmVx2cMX9RC9tfoGBNbzYZ4M8X4f3a33E4zQuBqv3pSrgE'
 
 export const DEFAULT_LIST_OF_LISTS: string[] = [
   DEFAULT_TOKEN_LIST_URL,
